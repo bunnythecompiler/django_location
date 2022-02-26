@@ -1,0 +1,15 @@
+{% extends 'location/base.html'%}
+{% block content %}
+    <div style="margin: 2%;">
+        <h1>Locate Me </h1>
+    </div>
+    <div style="margin: 2%;">
+       <img src="../static/images/maglens.jpg" width="300" height="200" class="img-thumbnail">
+    </div>
+    <div style="margin: 2%;">
+        <a class="btn  btn-primary" href="{% url 'home' %}">STREET SEARCH</a>
+    </div>
+    <div style="margin: 2%;">
+        <a class="btn btn-primary" href="{% url 'index' %}">CO-ORDINATES SEARCH</a>
+    </div>
+{% endblock content %}

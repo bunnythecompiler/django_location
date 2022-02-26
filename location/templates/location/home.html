@@ -1,0 +1,18 @@
+{% extends 'location/base.html'%}
+{% block content %}
+    <div style="margin: 2%;">
+        <h1>Welcome to locate me django app</h1>
+    </div>
+    <div style="margin: 2%; ">
+        <form method="POST">
+            {% csrf_token %}
+            address: <input type="text" name="address">
+            <button type="submit" class="btn btn-primary">Run</button>
+        </form>
+    </div>
+    <div>
+        <h3>Latitude : {{latitude}}</h3>
+        <br/>
+        <h3>Longitude : {{ longitude}}</h3>
+    </div>
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends 'location/base.html'%}
+{% block content %}
+    <div style="margin: 2%;">
+        <h1>Locate by lat and long </h1>
+    </div>
+    <div style="margin: 2%;">
+        <form method="POST">
+            {% csrf_token %}
+            latitude: <input type="text" name="latitude">
+            longitude: <input type="text" name="longitude">
+            <button type="submit" class="btn btn-primary">Run</button>
+        </form>
+    </div>
+    <div style="margin: 2%;">
+        <h4>{{ address }}</h4>
+    </div>
+{% endblock content %}
